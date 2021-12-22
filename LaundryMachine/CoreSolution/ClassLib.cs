@@ -37,6 +37,36 @@ namespace CoreSolution
                 }
             }
 
+            index = 0;
+            var firstList = new List<int>();
+            var secondList = new List<int>();
+            while (index < listOfCleanPile.Count && index < listOfDirtyPile.Count && noOfWashes > 0)
+            {
+                if (listOfCleanPile.Count < listOfDirtyPile.Count)
+                {
+                    // when you assign referrence types, the assignee points to the assigner
+                    firstList = listOfDirtyPile; // pointing effect
+                    secondList = listOfCleanPile; // pointing effect
+                }
+                else
+                {
+                    firstList = listOfCleanPile;
+                    secondList = listOfDirtyPile;
+                }
+
+                if (firstList.Contains(secondList[index]))
+                {
+                    firstList.Remove(secondList[index]);
+                    secondList.Remove(secondList[index]);
+                    maxNoOfWash += 1;
+                    noOfWashes -= 1;
+                }
+                else
+                {
+                    index += 1;
+                }
+            }
+
             return maxNoOfWash;
         }
     }
