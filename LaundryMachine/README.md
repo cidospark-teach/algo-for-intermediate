@@ -1,12 +1,12 @@
 # LaundryMachine
 
-We will like to pick socks for laundering in such a way that after washing we will have a maximal number of clean, same-coloured pair of socks. It is possible that some socks cannot be paired with any other sock, because we may have lost socks over the years.
+We will like to pick socks for laundry in such a way that after washing we will have a maximal number of clean, same-coloured pair of socks. It is possible that some socks cannot be paired with any other socks, because we may have lost socks over the years.
 
 This machine can only wash a sock at a time and clean at most 'n' number of  socks as described by `noOfWashes`.
 
 ---
 
-There are two category of sucks which are described as `cleanPile` and `dirtyPile` respectively. The colours of the socks are represented as integers with _equal numbers_ representing identical colours.
+There are two category of socks which are described as `cleanPile` and `dirtyPile` respectively. The colours of the socks are represented as integers with _equal numbers_ representing identical colours.
 
 For example, if the laundry machine can clean at most 2 socks.
 
@@ -18,7 +18,7 @@ dirtyPile: int[] number = new int[] {1, 4, 3, 2, 4};
 
 Then, the maximum number of pairs of socks is 3.
 
-If `noOfWashes` is 0. The maximum number of socks is 1 because the machine will only select matching clean pair of sucks from the `cleanPile`.
+If `noOfWashes` is 0. The maximum number of socks is 1 because the machine will only select matching clean pair of socks from the `cleanPile`.
 
 Also, if the machine can wash as many socks as we want, the maximum number of pair of socks, for this scenario is 4.
 
