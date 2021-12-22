@@ -7,6 +7,7 @@ namespace CoreSolution
     {
         public int GetMaximumPairOfSocks(int noOfWashes, int[] cleanPile, int[] dirtyPile)
         {
+            // check for edge cases
             if (noOfWashes < 0 || noOfWashes > 50)
                 return -1;
 
@@ -22,6 +23,7 @@ namespace CoreSolution
             listOfDirtyPile.Sort();
             var maxNoOfWash = 0;
 
+            // check for matching pairs from cleanPiles
             int index = 0;
             while (index < listOfCleanPile.Count && (index + 1) < listOfCleanPile.Count)
             {
@@ -37,6 +39,7 @@ namespace CoreSolution
                 }
             }
 
+            // check for matching pairs from cleanPile and dirtyPile
             index = 0;
             var firstList = new List<int>();
             var secondList = new List<int>();
