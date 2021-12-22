@@ -70,6 +70,24 @@ namespace CoreSolution
                 }
             }
 
+            // check for matching pairs from dirtyPile
+            index = 0;
+            while (index < listOfDirtyPile.Count && (index + 1) < listOfDirtyPile.Count && noOfWashes > 1)
+            {
+                if (listOfDirtyPile[index] == listOfDirtyPile[index + 1])
+                {
+                    maxNoOfWash += 1;
+                    listOfDirtyPile.Remove(listOfDirtyPile[index]);
+                    listOfDirtyPile.Remove(listOfDirtyPile[index]);
+                    noOfWashes -= 2;
+                }
+                else
+                {
+                    index += 1;
+                }
+            }
+
+
             return maxNoOfWash;
         }
     }
