@@ -28,7 +28,7 @@ namespace SolutionLib
                 return new Dictionary<int, T>() { { 0, list[0] } };
 
             // return result if middleIndex match search item
-            if (searchItem.Equals(middleIndex))
+            if (searchItem.Equals(list[list.Count - 1]))
                 return new Dictionary<int, T>() { { list.Count - 1, list[list.Count - 1] } };
 
             
