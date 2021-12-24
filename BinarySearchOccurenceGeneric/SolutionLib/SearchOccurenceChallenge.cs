@@ -16,7 +16,7 @@ namespace SolutionLib
             list.Sort();
 
             // to avoid the repeated process of sorting I had to extract the code into PerformSearch() method below
-            PerformSearchOccurence (list, searchItem);
+            SearchLeftSide(list, searchItem);
 
             if (rightSubList != null)
                 SearchRightSide(rightSubList, searchItem);
@@ -24,7 +24,7 @@ namespace SolutionLib
             return occurence;
         }
 
-        private static int PerformSearchOccurence(List<T> list, T searchItem)
+        private static int SearchLeftSide(List<T> list, T searchItem)
         {
             // if array length is 0 or less Or the length is 1 and not equal to the search term the return early
             if (list.Count < 1 || list.Count == 1 && !list[0].Equals(searchItem))
@@ -66,7 +66,7 @@ namespace SolutionLib
             }
 
 
-            return PerformSearchOccurence(sublist, searchItem); // recursive action, method calling itself to evaluate the list
+            return SearchLeftSide(sublist, searchItem); // recursive action, method calling itself to evaluate the list
 
         }
 
@@ -83,7 +83,7 @@ namespace SolutionLib
 
         private static int SearchRightSide(List<T> list, T searchItem)
         {
-            return PerformSearchOccurence(list, searchItem);
+            return SearchLeftSide(list, searchItem);
         }
     }
 
