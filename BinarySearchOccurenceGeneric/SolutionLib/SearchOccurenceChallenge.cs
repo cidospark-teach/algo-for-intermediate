@@ -18,6 +18,8 @@ namespace SolutionLib
             // to avoid the repeated process of sorting I had to extract the code into PerformSearch() method below
             PerformSearchOccurence (list, searchItem);
 
+            if (rightSubList != null)
+                SearchRightSide(rightSubList, searchItem);
 
             return occurence;
         }
@@ -79,7 +81,10 @@ namespace SolutionLib
                 return 2;
         }
 
-        
+        private static int SearchRightSide(List<T> list, T searchItem)
+        {
+            return PerformSearchOccurence(list, searchItem);
+        }
     }
 
 }

@@ -13,6 +13,10 @@ namespace MainProj
             int searchTerm = 13;
 
 
+            var res = SearchOccurenceChallenge<int>.Search(arr, searchTerm);
+
+            Console.Write(res < 1 ? "Not found" : $"Found {res} occurence(s) for the search term ==> {searchTerm}");
+
         }
     }
 }
