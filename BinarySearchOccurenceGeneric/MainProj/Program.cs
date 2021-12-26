@@ -10,7 +10,7 @@ namespace MainProj
         {
             var arr = new int[] { 4, 4, 13, 4, 4, 4 };
             var dict = new Dictionary<int, List<int>>();
-            int searchTerm = 4;
+            int searchTerm = 130;
 
             // I did something a little bit extra here ==>
             // this for loop is arranging the indexes of the arr items into value pairs of there frequency
